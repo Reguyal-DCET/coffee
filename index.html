@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <style>
+  /* Reset some defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fbrown-wood-background&psig=AOvVaw2x1mzliKGS1qyiVLHM-S0E&ust=1750586967173000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNiV0-6igo4DFQAAAAAdAAAAABAE') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form container styling */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #4b3224;
+}
+
+p {
+  margin-top: 15px;
+  color: #333;
+}
+
+a {
+  color: #6f4e37;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Create Account</h2>
+    <form id="signupForm">
+      <input type="text" id="newUsername" placeholder="Enter username" required>
+      <input type="password" id="newPassword" placeholder="Enter password" required>
+      <button type="submit">Create Account</button>
+    </form>
+    <p>Already have an account? <a href="signin.html">Sign in here</a></p>
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("newUsername").value;
+      const password = document.getElementById("newPassword").value;
+
+      // Save account to localStorage
+      localStorage.setItem("account_username", username);
+      localStorage.setItem("account_password", password);
+
+      alert("Account created! Please sign in.");
+      window.location.href = "signin.html";
+    });
+  </script>
+</body>
+</html> 

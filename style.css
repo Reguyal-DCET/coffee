@@ -1,0 +1,550 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation - Responsive */
+        nav {
+            background-color: #000;
+            padding: clamp(15px, 3vw, 25px) 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: clamp(20px, 3vw, 28px);
+            font-weight: bold;
+            color: white;
+            margin-right: auto;
+        }
+        
+        .logo-icon {
+            width: clamp(30px, 4vw, 40px);
+            height: clamp(30px, 4vw, 40px);
+            margin-right: 10px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%238B4513"><path d="M18 6h2v12h-2zm-4 3h6v2h-6zm-9.5-1c-.276 0-.5.224-.5.5v10c0 .276.224.5.5.5h13c.276 0 .5-.224.5-.5v-10c0-.276-.224-.5-.5-.5h-13zm.5 1h12v9h-12v-9zm4.5 1.5c0 .828-.672 1.5-1.5 1.5s-1.5-.672-1.5-1.5.672-1.5 1.5-1.5 1.5.672 1.5 1.5z"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            order: 1;
+            margin-left: 20px;
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-center {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: clamp(10px, 2vw, 20px);
+        }
+        
+        .nav-links li {
+            position: relative;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: clamp(14px, 1.8vw, 18px);
+            transition: color 0.3s;
+            padding: 8px 0;
+            white-space: nowrap;
+        }
+        
+        /* White menu text with brown hover */
+        .nav-links a:hover,
+        .nav-links a:focus,
+        .nav-links a.active {
+            color: #8B4513;
+        }
+        
+        /* Underline animation */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: #8B4513;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a:focus::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            margin-left: clamp(10px, 3vw, 25px);
+            gap: clamp(10px, 2vw, 25px);
+        }
+        
+        .search-container {
+            position: relative;
+        }
+        
+        .search-container input {
+            padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2vw, 20px);
+            border: 1px solid #444;
+            border-radius: 30px;
+            outline: none;
+            width: clamp(120px, 15vw, 180px);
+            transition: all 0.3s;
+            background-color: #222;
+            color: white;
+            font-size: clamp(12px, 1.5vw, 16px);
+        }
+        
+        .search-container input:focus {
+            width: clamp(150px, 20vw, 220px);
+            border-color: #8B4513;
+        }
+        
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 2vw, 25px);
+        }
+        
+        .nav-icons a {
+            color: white;
+            font-size: clamp(18px, 2.5vw, 24px);
+            transition: color 0.3s;
+        }
+        
+        /* Brown hover for icons */
+        .nav-icons a:hover,
+        .nav-icons a:focus,
+        .nav-icons a.active {
+            color: #8B4513;
+        }
+        
+        /* Hero Section - Responsive */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: clamp(60px, 10vw, 120px) 5%;
+            color: white;
+            background: url('https://storge.pic2.me/c/1360x800/301/58652a1a6cad8.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: min(600px, 90%);
+            margin-left: clamp(5%, 10vw, 15%);
+        }
+        
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 60px);
+            margin-bottom: clamp(15px, 3vw, 30px);
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: clamp(16px, 2.2vw, 22px);
+            margin-bottom: clamp(20px, 4vw, 40px);
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #8B4513;
+            color: white;
+            padding: clamp(12px, 2vw, 20px) clamp(30px, 4vw, 50px);
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-size: clamp(16px, 2.2vw, 22px);
+            width: fit-content;
+            border: 3px solid #8B4513;
+            text-shadow: none;
+        }
+        
+        .btn:hover {
+            background-color: #A0522D;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.4);
+        }
+        .drink-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            }
+
+        .drink-image {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+        /* Mobile Menu Styles */
+        @media (max-width: 992px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-container {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: #000;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 5%;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+                transform: translateY(-150%);
+                opacity: 0;
+            }
+            
+            .nav-container.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            .nav-center {
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                gap: 15px;
+            }
+            
+            .nav-right {
+                flex-direction: column;
+                width: 100%;
+                margin-left: 0;
+                gap: 15px;
+            }
+            
+            .search-container {
+                width: 100%;
+                margin-right: 0;
+            }
+            
+            .search-container input {
+                width: 100%;
+            }
+            
+            .search-container input:focus {
+                width: 100%;
+            }
+            
+            .nav-icons {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .hero-content {
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+        
+        /* Add this new style for the menu section */
+        .menu-section {
+            padding: 80px 5%;
+            background-color: #48270f;
+            min-height: 100vh;
+        }
+        
+        .menu-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+        
+        /* Left-side menu styles */
+        .drink-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .category {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .category-header {
+            background-color: #5D4037;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .category-header:hover {
+            background-color: #4E342E;
+        }
+        
+        .category-header i {
+            transition: transform 0.3s;
+        }
+        
+        .category-header.active i {
+            transform: rotate(180deg);
+        }
+        
+        .drink-items {
+            display: none;
+            padding: 20px;
+            background-color: white;
+        }
+        
+        .drink-items.show {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .drink-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .drink-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        
+        .drink-name {
+            font-size: 1.2rem;
+            color: #3E2723;
+            margin-bottom: 8px;
+        }
+        
+        .drink-price {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+        
+        .drink-desc {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .add-to-cart {
+            background-color: #8B4513;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #A0522D;
+        }
+
+        /* Contact Section */
+#contact {
+  padding: 80px 5%;
+  background-color: #fff3e6;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #5D4037;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.contact-info {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #4e342e;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  margin-right: 15px;
+  color: #6d4c41;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #4e342e;
+}
+
+.contact-form {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+  color: #5D4037;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #6d4c41;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #5d4037;
+}
+
+/*cart html*/
+.cart-link {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: #ff4d4d;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+
+.drink-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.wishlist-btn {
+  background: none;
+  border: none;
+  color: #ffc107;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.2);
+  color: #ff9800;
+}

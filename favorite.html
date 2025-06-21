@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Favorites - Bean There</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+      /* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FF000000;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4b2e2e;
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: #ffe6cc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* Section Heading */
+.favorites-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff7f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.favorites-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #6b3e26;
+}
+
+/* Wishlist Container */
+#wishlist-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Individual Drink Item */
+.drink-item {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.drink-item:hover {
+  transform: translateY(-5px);
+}
+
+.drink-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.drink-name {
+  font-size: 1.2rem;
+  color: #4b2e2e;
+  margin-bottom: 8px;
+}
+
+.drink-price {
+  font-weight: bold;
+  color: #6b3e26;
+  font-size: 1rem;
+}
+
+/* Empty State */
+#wishlist-container p {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+nav a {
+  background-color: #ffe6cc;
+  color: #4b2e2e;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #f1d0aa;
+  color: #3a1f1f;
+}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">BEAN THERE</div>
+    <a href="index.html">Back to Home</a>
+  </nav>
+
+  <section class="favorites-section">
+    <h2>Your Favorites</h2>
+    <div class="wishlist-items" id="wishlist-container">
+      <!-- Wishlist items will be rendered here -->
+    </div>
+  </section>
+
+  <script>
+    // Load and display wishlist items
+    document.addEventListener('DOMContentLoaded', function () {
+      const container = document.getElementById('wishlist-container');
+      const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+      if (wishlist.length === 0) {
+        container.innerHTML = "<p>Your wishlist is empty.</p>";
+        return;
+      }
+
+      wishlist.forEach(item => {
+        const div = document.createElement('div');
+        div.classList.add('drink-item');
+        div.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" class="drink-image" />
+          <h3 class="drink-name">${item.name}</h3>
+          <div class="drink-price">${item.price}</div>
+        `;
+        container.appendChild(div);
+      });
+    });
+  </script>
+
+</body>
+</html>

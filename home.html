@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean There - Coffee Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <div class="logo-icon"></div>
+            BEAN THERE
+        </div>
+        
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="nav-container">
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    
+<li><a href="#contact">Contacts</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="nav-icons">
+                    <a href="favorite.html" aria-label="Favorites"><i class="fas fa-heart"></i></a>
+                   <a href="cart.html" aria-label="Shopping cart" class="cart-link">
+  <i class="fas fa-shopping-cart"></i>
+  <span class="cart-count">0</span>
+</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>WELCOME TO BEAN THERE</h1>
+            <p>Bean There – Where Every Sip Tells a Story
+Welcome to Bean There, your local haven for handcrafted drinks and feel-good vibes. From bold espresso shots to refreshing matcha blends, we serve up more than just coffee — we serve experiences. Whether you're grinding through work, catching up with friends, or just craving something sweet, there's always a cozy corner and a warm cup waiting for you here.
+Stay grounded. Sip often. Be here. Bean There.</p>
+            <a href="#menu" class="btn">View Menu</a> 
+        </div>
+    </section>
+    
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2 class="menu-title">Our Drinks Menu</h2>
+        
+        <div class="drink-categories">
+            <!-- Espresso-->
+            <div class="category">
+                <div class="category-header">
+                    <span>Espresso</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="drink-items">
+                    <div class="drink-item">
+  <img src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190410_NitroColdBrew.jpg?impolicy=" alt="Espresso" class="drink-image">
+  <h3 class="drink-name">Classic Espresso</h3>
+  <div class="drink-price">₱80.50</div>
+  <p class="drink-desc">Rich and bold single shot of our finest espresso</p>
+  <div class="drink-footer">
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+</div>
+
+                    <div class="drink-item">
+                        <img src="https://th.bing.com/th/id/OIP.PDpxSIVdsyyUBgPEic11XwHaHa?w=184&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Double Espresso" class="drink-image">
+                        <h3 class="drink-name">Espresso Macchiato</h3>
+                        <div class="drink-price">₱70.00</div>
+                        <p class="drink-desc">Two shots of our signature espresso for extra kick</p>
+                        <div class="drink-footer">
+                       <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+                    </div>
+                    <div class="drink-item">
+                        <img src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Americano_0.jpeg" alt="Double Espresso" class="drink-image">
+                        <h3 class="drink-name">Americano</h3>
+                        <div class="drink-price">₱79.00</div>
+                        <p class="drink-desc">Espresso shots topped with hot water</p>
+                       <div class="drink-footer">
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Matcha-->
+            <div class="category">
+                <div class="category-header">
+                    <span>Matcha</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="drink-items">
+                    
+                    <div class="drink-item">
+                        <img src="https://www.matchatop.com/wp-content/uploads/2024/03/Starbucks-Iced-Matcha-Latte.jpeg.webp" alt="Classic Matcha Latte" class="drink-image">
+                        <h3 class="drink-name">Classic Iced Matcha Latte</h3>
+                        <div class="drink-price">₱95.00</div>
+                        <p class="drink-desc">Ceremonial grade matcha with steamed milk</p>
+                        <div class="drink-footer">
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+                    </div>
+                    <div class="drink-item">
+                        <img src="https://th.bing.com/th/id/OIP.etFNXkbPTC9U2tbfSxDnvQHaFO?w=198&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Double Espresso" class="drink-image">
+                        <h3 class="drink-name">Strawberry Matcha</h3>
+                        <div class="drink-price">₱109.00</div>
+                        <p class="drink-desc">Sweet strawberry puree layered with matcha</p>
+                        <div class="drink-footer">
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+                    </div>
+                    <div class="drink-item">
+                        <img src="https://140329508.cdn6.editmysite.com/uploads/1/4/0/3/140329508/s347941741737200035_p24_i4_w1080.png" alt="Double Espresso" class="drink-image">
+                        <h3 class="drink-name">Iced Matcha</h3>
+                        <div class="drink-price">₱129.00</div>
+                        <p class="drink-desc">Refreshing cold matcha with your choice of milk</p>
+                        <div class="drink-footer">
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+             <!-- tea -->
+
+            <div class="category">
+  <div class="category-header">
+    <span>Tea</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+  <div class="drink-items">   
+    <div class="drink-item">
+         <img src="data:image/webp;base64,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" alt="Double Espresso" class="drink-image">
+      <h3 class="drink-name">Earl Grey</h3>
+      <div class="drink-price">₱90.00</div>
+      <p class="drink-desc">Fragrant black tea infused with bergamot citrus</p>
+      <div class="drink-footer">
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+    </div>
+    <div class="drink-item">
+        <img src="https://th.bing.com/th/id/OIP.4P2kZpr9DyQ7jTGHzB26-AHaHa?w=190&h=190&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Double Espresso" class="drink-image">
+      <h3 class="drink-name">Chamomile Tea</h3>
+      <div class="drink-price">₱85.00</div>
+      <p class="drink-desc">Soothing caffeine-free herbal tea</p>
+      <div class="drink-footer">
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+    </div>
+    <div class="drink-item"> 
+        <img src="https://th.bing.com/th/id/OIP.4P2kZpr9DyQ7jTGHzB26-AHaHa?w=190&h=190&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Double Espresso" class="drink-image">
+      <h3 class="drink-name">Chamomile Tea</h3>
+      <div class="drink-price">₱95.00</div>
+      <p class="drink-desc">Classic antioxidant-rich steamed green tea</p>
+      <div class="drink-footer">
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- pastries -->
+
+
+<div class="category">
+  <div class="category-header">
+    <span>Pastries</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+  <div class="drink-items">
+    <div class="drink-item">
+        <img src="https://th.bing.com/th/id/OIP.yv0DWbP9q5IjQBBTzMnOGwHaHa?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3" alt="Double Espresso" class="drink-image">
+      <h3 class="drink-name">Chocolate Bar</h3>
+      <div class="drink-price">₱65.00</div>
+      <p class="drink-desc">Flaky, buttery classic French pastry</p>
+      <div class="drink-footer">
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+    </div>
+    <div class="drink-item">
+         <img src="https://th.bing.com/th/id/OIP.ksywmN0LWYZEunKbSZ2sAgHaHa?w=208&h=208&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Double Espresso" class="drink-image">
+      <h3 class="drink-name">Chocolate Muffin</h3>
+      <div class="drink-price">₱75.00</div>
+      <p class="drink-desc">Rich chocolate muffin with a gooey center</p>
+      <div class="drink-footer">
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+    </div>
+    <div class="drink-item">
+         <img src="https://th.bing.com/th/id/OIP.NN7HSAD7cfCbfzDePheNUgHaHa?w=208&h=208&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Double Espresso" class="drink-image">
+      <h3 class="drink-name">Banana Bread</h3>
+      <div class="drink-price">₱70.00</div>
+      <p class="drink-desc">Moist banana bread with a touch of cinnamon</p>
+      <div class="drink-footer">
+  <button class="add-to-cart">Add to Cart</button>
+  <button class="wishlist-btn">
+    <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+            
+           
+        </div>
+    </section>
+    
+    
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-info">
+    <p><strong>Email:</strong> contact@beanthere.com</p>
+    <p><strong>Phone:</strong> +63 912 345 6789</p>
+    <div class="social-links">
+      <a href="https://facebook.com/beanthere" target="_blank">Facebook</a>
+      <a href="https://instagram.com/beanthere" target="_blank">Instagram</a>
+      <a href="https://twitter.com/beanthere" target="_blank">Twitter/X</a>
+    </div>
+  </div>
+
+  <form action="https://formsubmit.co/reguyaljenzdelosreyes@gmail.com" method="POST" style="max-width: 600px; margin: 30px auto; display: flex; flex-direction: column; gap: 20px; padding: 30px; background-color: #fefefe; border: 3px solid #6f4e37; border-radius: 12px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://Reguyal-DCET.github.io/coffee-web-application/">
+
+
+  <input type="text" name="name" placeholder="Your Name (optional)" style="padding: 15px; border: 2px solid #ccc; border-radius: 8px; font-size: 1rem; font-family: inherit; width: 100%; box-sizing: border-box;">
+
+  <textarea name="message" placeholder="Your Feedback" rows="5" required style="padding: 15px; border: 2px solid #ccc; border-radius: 8px; font-size: 1rem; font-family: inherit; resize: vertical; width: 100%; box-sizing: border-box; min-height: 150px;"></textarea>
+
+  <button type="submit" style="background-color: #6f4e37; color: white; padding: 15px; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;">Send Feedback</button>
+</form>
+        <script src="script.js"></script>
+
+        <script>
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "signin.html";
+  }
+</script>
+
+
+
+</body>
+</html>
